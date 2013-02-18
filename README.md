@@ -9,4 +9,10 @@ The more verbose syntax of private readonly fields and getters over auto propert
 
 Unit test coverage is low for brevity.  Production code demands a more comprehensive suite of tests.
 
+
+In addition to version 1:
+
+Operator overloading; see Point
+Use of dynamic mocking; see PageTests
+
  

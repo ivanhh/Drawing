@@ -25,5 +25,15 @@
         {
             return string.Format("x={0}, y={1}", X, Y);
         }
+        
+        public static bool operator >(Point a, Point b)
+        {
+            return a.X > b.X || a.Y > b.Y;
+        }
+
+        public static bool operator <(Point a, Point b)
+        {
+            return a.X < b.X || a.Y < b.Y;
+        }
     }
 }

@@ -1,10 +1,10 @@
 ﻿namespace Drawing.Lib
 {
-    public abstract class Textbox : Rectangle
+    public class Textbox : Rectangle
     {
         private readonly string _text;
 
-        protected Textbox(Point location, uint width, uint height, string text) : base(location, width, height)
+        protected Textbox(uint width, uint height, string text) : base( width, height)
         {
             _text = text;
         }

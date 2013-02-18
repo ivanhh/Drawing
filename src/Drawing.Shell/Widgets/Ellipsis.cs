@@ -5,12 +5,12 @@ namespace Drawing.Shell.Widgets
 {
     public class Ellipsis : Lib.Ellipsis
     {
-        public Ellipsis(Point location, uint horizontalDiameter, uint verticleDiameter) : base(location, horizontalDiameter, verticleDiameter)
+        public Ellipsis(uint horizontalDiameter, uint verticleDiameter) : base(horizontalDiameter, verticleDiameter)
         {}
 
-        public override void Render()
+        public override void Render(Point bottomLeft)
         {
-            Console.WriteLine("{0} {1}, horizontal diameter={2}, verticle diameter={3}", Name, Location, HorizontalDiameter, VerticleDiameter);
+            Console.WriteLine("{0} {1}, horizontal diameter={2}, verticle diameter={3}", Name, bottomLeft, HorizontalDiameter, VerticleDiameter);
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace Drawing.Lib
 {
-    public abstract class Square : Rectangle
+    public class Square : Rectangle
     {
-        protected Square(Point location, uint size) : base(location, size, size)
+        protected Square(uint size) : base(size, size)
         {}
 
         public override string Name

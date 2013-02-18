@@ -42,12 +42,12 @@
     <Compile Include="Circle.cs" />
     <Compile Include="Ellipsis.cs" />
     <Compile Include="IWidget.cs" />
+    <Compile Include="Page.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Textbox.cs" />
-    <Compile Include="Widget.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

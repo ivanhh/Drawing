@@ -2,12 +2,12 @@
 
 namespace Drawing.Lib
 {
-    public abstract class Ellipsis : Widget
+    public class Ellipsis : IWidget
     {
         private readonly uint _horizontalDiameter;
         private readonly uint _verticleDiameter;
 
-        protected Ellipsis(Point location, uint horizontalDiameter, uint verticleDiameter) : base(location)
+        protected Ellipsis(uint horizontalDiameter, uint verticleDiameter) 
         {
             if (horizontalDiameter == 0 || verticleDiameter == 0)
                 throw new ArgumentException("Verticle diameter and horizontal diameter must be greater than zero");
@@ -26,9 +26,17 @@ namespace Drawing.Lib
             get { return _verticleDiameter; }
         }
 
-        public override string Name
+        public virtual string Name
         {
             get { return "ellipsis"; }
+        }
+
+        public virtual void Render(Point bottomLeft)
+        {}
+
+        public Point GetTopRight(Point bottomLeft)
+        {
+            return new Point(bottomLeft.X+HorizontalDiameter, bottomLeft.Y+VerticleDiameter); 
         }
     }
 }

@@ -5,12 +5,12 @@ namespace Drawing.Shell.Widgets
 {
     public class Circle : Lib.Circle
     {
-        public Circle(Point location, uint diameter) : base(location, diameter)
+        public Circle(uint diameter) : base(diameter)
         {}
 
-        public override void Render()
+        public override void Render(Point bottomLeft)
         {
-            Console.WriteLine("{0} {1}, size={2}", Name, Location, HorizontalDiameter);
+            Console.WriteLine("{0} {1}, size={2}", Name, bottomLeft, HorizontalDiameter);
         }
     }
 }

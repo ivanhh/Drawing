@@ -8,21 +8,19 @@ namespace Drawing.Shell
     {
         static void Main(string[] args)
         {
-            var widgets = new List<IWidget>
-                {
-                    new Widgets.Rectangle(new Point(10, 10), 30, 40),
-                    new Widgets.Square(new Point(15, 30), 35),
-                    new Widgets.Ellipsis(new Point(100, 150), 300, 200),
-                    new Widgets.Circle(new Point(1, 1), 300),
-                    new Widgets.Textbox(new Point(5, 5), 200, 100, "sample text")
-                };
+            var page = new Page(1000, 1000);
+
+            page.AddWidget(new Widgets.Rectangle(30, 40), new Point(10, 10));
+            page.AddWidget(new Widgets.Square(35), new Point(15, 30));
+            page.AddWidget(new Widgets.Ellipsis(300, 200), new Point(100, 150));
+            page.AddWidget(new Widgets.Circle(300), new Point(1, 1));
+            page.AddWidget(new Widgets.Textbox(200, 100, "sample text"), new Point(5, 5));
 
             Console.WriteLine("----------------------------------------------------------------");
             Console.WriteLine("Current Drawing");
             Console.WriteLine("----------------------------------------------------------------");
 
-            foreach (var widget in widgets)
-                widget.Render();
+            page.Render();
 
             Console.WriteLine("----------------------------------------------------------------");
 #if DEBUG

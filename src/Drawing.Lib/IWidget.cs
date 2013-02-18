@@ -2,8 +2,8 @@
 {
     public interface IWidget
     {
-        void Render();
-        Point Location { get; }
+        Point GetTopRight(Point bottomLeft);
         string Name { get; }
+        void Render(Point bottomLeft);
     }
 }

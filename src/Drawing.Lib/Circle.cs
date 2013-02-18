@@ -1,9 +1,9 @@
 ﻿namespace Drawing.Lib
 {
-    public abstract class Circle : Ellipsis
+    public class Circle : Ellipsis
     {
-        protected Circle(Point location, uint diameter)
-            : base(location, diameter, diameter)
+        protected Circle(uint diameter)
+            : base( diameter, diameter)
         {}
 
         public override string Name

@@ -5,12 +5,12 @@ namespace Drawing.Shell.Widgets
 {
     public class Square : Lib.Square
     {
-        public Square(Point location, uint size) : base(location, size)
+        public Square(uint size) : base(size)
         {}
 
-        public override void Render()
+        public override void Render(Point bottomLeft)
         {
-            Console.WriteLine("{0} {1}, size={2}", Name, Location, Width);
+            Console.WriteLine("{0} {1}, size={2}", Name, bottomLeft, Width);
         }
     }
 }

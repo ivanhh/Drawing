@@ -5,12 +5,12 @@ namespace Drawing.Shell.Widgets
 {
     public class Rectangle : Lib.Rectangle
     {
-        public Rectangle(Point location, uint width, uint height) : base(location, width, height)
+        public Rectangle(uint width, uint height) : base(width, height)
         {}
 
-        public override void Render()
+        public override void Render(Point bottomLeft)
         {
-            Console.WriteLine("{0} {1}, width={2} height={3}", Name, Location, Width, Height);
+            Console.WriteLine("{0} {1}, width={2} height={3}", Name, bottomLeft, Width, Height);
         }
     }
 }
