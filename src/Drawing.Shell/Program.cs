@@ -10,7 +10,7 @@ namespace Drawing.Shell
         {
             var widgets = new List<IWidget>
                 {
-                    new Widgets.Rectangle(new Point(10, 10), 30, 40),
+                    new Widgets.Rectangle(new Point(20, 20), 30, 40),
                     new Widgets.Square(new Point(15, 30), 35),
                     new Widgets.Ellipsis(new Point(100, 150), 300, 200),
                     new Widgets.Circle(new Point(1, 1), 300),
